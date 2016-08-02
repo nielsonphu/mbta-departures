@@ -5,6 +5,7 @@ FactoryGirl.define do
 		destination "Salem"
 		scheduled_time Time.now
 		lateness "00:00:00"
-		track status "On Time"
+		track 111
+		status "On Time"
 	end
 end

@@ -1,0 +1,16 @@
+<h1>MBTA Departures</h1>
+
+<table>
+<tr><th>Origin</th><th>Trip</th><th>Destination</th><th>Scheduled Time</th><th>Lateness</th><th>Track</th><th>Status</th></tr>
+<% @trips.each do |trip| %>
+	<tr>
+		<td><%= trip.origin %></td>
+		<td><%= trip.trip %></td>
+		<td><%= trip.destination %></td>
+		<td><%= trip.scheduled_time.strftime("%I:%M%p") %></td>
+		<td><%= trip.lateness %></td>
+		<td><%= trip.track %></td>
+		<td><%= trip.status %></td>
+	</tr>
+<% end %>
+</table>
